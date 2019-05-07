@@ -1,0 +1,130 @@
+#header {
+  width: 100%;
+  height: 500px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+}
+.bg1 {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../img/intro-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.bg2 {
+  background-color: #299DB6;
+}
+
+#headerblob {
+  position: absolute;
+  left: 26%;
+  top: 30%;
+  width: 50%;
+}
+#headertext {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 37%;
+}
+.imgme {
+  border: 3px solid white;
+  /* box-shadow: #AAA 0px 0px 4px 0px; */
+  float: left;
+  height: 200px;
+}
+
+
+#timeline {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .timelineitem:nth-child(odd) {
+    margin-left: 50%;
+    border-left: 5px solid #333;
+    text-align: left;
+  }
+  .timelineitem:nth-child(even) {
+    margin-right: 50%;
+    margin-left: 5px;
+    border-right: 5px solid #333;
+    text-align: right;
+  }
+  .timelineitem {
+    width: 50%;
+    position: relative;
+    padding: 20px;
+  }
+  .timelineitem:nth-child(odd):before {
+   left: -8px;
+  }
+  .timelineitem:nth-child(even):before {
+    right: -8px;
+  }
+}
+
+.timelineitem:before {
+  width: 11px;
+  height: 11px;
+  background: #333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .timelineitem {
+    border-left: 5px solid #333;
+    text-align: left;
+    margin-left: 10px;
+    padding: 5px;
+    position: relative;
+  }
+  .timelineitem:before {
+    left: -8px;
+  }
+}
+
+.tdate {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: -5px;
+  color: rgb(132,0,0);
+}
+.ttitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.tdesc {
+  font-size: 18px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .tdate {
+    font-size: 16px;
+  }
+  .ttitle {
+    font-size: 16px;
+  }
+  .tdesc {
+    font-size: 16px;
+  }
+}
+.thigh {
+  color: steelblue;
+}
+.quote {
+  color: #777;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  padding: 90px 0 50px;
+}
+.quote blockquote {
+  font-size: 28px;
+}
+
+

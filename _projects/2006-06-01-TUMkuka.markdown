@@ -1,0 +1,18 @@
+---
+layout: default
+img: kuka.gif
+category: projects
+title: Haptic Control of Industrial Robots
+description: |
+  I created a remote assembly scenario-concept using 
+  a Haptic pen to control an industrial Kuka robot,
+  a .NET wrapper for C++ APIs, 
+  and 3D stereo visualization for the scene.
+
+links:
+  - title: IEEE Workshop
+    url: https://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4062552
+
+venue: Technische Universitat Muenchen, 2006
+authors: Zouhair Mahboubi and Stella Clarke
+---

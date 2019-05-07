@@ -1,0 +1,19 @@
+---
+layout: default
+img: nasa_record.jpg
+category: projects
+title: Small Autonomous UAV Altitude Record
+venue: NASA Dryden, 2009
+authors: Stanford AA241X Team
+links:
+   - title: NASA Article
+     url: https://www.nasa.gov/centers/dryden/Features/stanford_mini_uav_prt.htm
+   - title: Stanford News Article
+     url: https://news.stanford.edu/news/2009/september14/airplane-self-pilot-091809.html
+   - title: YouTube
+     url: https://www.youtube.com/watch?v=K2Gq_iUnmaQ  
+description: |
+  As part of a group of Stanford Aero/Astro students, we designed, built, and tested
+  small UAVs that we used to set the world altitude record for ’autonomous electrical UAV under 5kg’.
+  We launched the UAVs at NASA's Dryden (now Armstrong) flight research center.
+---
