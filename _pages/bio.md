@@ -1,5 +1,5 @@
 ---
-layout: timeline
+layout: bio
 title: Bio & Career Timeline
 permalink: /bio
 comments: false
@@ -9,10 +9,10 @@ comments: false
     <img src="./assets/img/me.png" class="img-circle imgme">
     <div id="headertext">
       <div id="htname">{{ page.title }}</div>
-      <div id="htdesc">{{ page.subTitle }}</div>
-      <div id="htem">{{ page.email }}</div>
+      <div id="htdesc">{{ site.author.description }}</div>
+      <div id="htem">{{ site.author.email }}</div>
       <div id="icons">
-        {% for social in page.social %}
+        {% for social in site.author.social %}
         <div class="svgico">
           <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-lg" style="color:white"></i></a>
         </div>
@@ -20,7 +20,7 @@ comments: false
       </div>
       <div id="resume">
         <ul>
-          <li><a href={{ page.cv }}>Resume</a></li>
+          <li><a href={{ site.author.cv }}>Resume</a></li>
         </ul>
       </div>  
     </div>
