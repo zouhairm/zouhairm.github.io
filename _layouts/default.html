@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/img/logo.png">
+<link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
 
 <title>{{site.name}}</title>
 
@@ -63,7 +63,24 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
+                {% assign pagelinks = "blog|projects|bio" | split: "|" %}
+                {% for p in pagelinks %}
+                    {% if p == "blog" %}
+                        {% assign url = "/" %}
+                    {% else %}
+                        {% assign url = "/" | append: p %}
+                    {% endif %}
+                    {% if page.url == url %}
+                    <li class="nav-item active">
+                    {% else %}
+                    <li class="nav-item">
+                    {% endif %}
 
+                    <a class="nav-link" href="{{ site.baseurl }}{{ url }}">{{ p | capitalize }}</a>
+                    </li> 
+                {% endfor %}
+
+                <!-- 
                 {% if page.url == "/" %}
                 <li class="nav-item active">
                 {% else %}
@@ -78,7 +95,7 @@ ga('send', 'pageview');
 
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/bio">Bio</a>
-                </li>
+                </li> -->
 
 
                 <!-- {% include search-lunr.html %} -->
@@ -124,6 +141,9 @@ ga('send', 'pageview');
 
 <!-- Categories Jumbotron
 ================================================== -->
+{% if page.skipjumbotron %}
+<!-- No jumbotron! -->
+{% else %}
 <div class="jumbotron fortags">
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
@@ -132,21 +152,21 @@ ga('send', 'pageview');
             </div>
 		</div>
 		<div class="col-md-8 p-5 align-self-center text-center">
-            {% assign categories_list = site.categories %}
+            {% assign categories_list = site.tags %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/tags#{{ category | url_escape | strip | replace: ' ', '-' }}">#{{ category }} ({{ site.tags[category].size }})</a>
                 {% endfor %}
             {% else %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/tags#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">#{{ category[0] }} ({{ category[1].size }})</a>
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}
 		</div>
 	</div>
 </div>
-
+{% endif %}
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">

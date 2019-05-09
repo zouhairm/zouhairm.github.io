@@ -1,10 +1,10 @@
 ---
-layout: default
-img: PhDThesis.png
-category: projects
+layout: proj
+author: zouhair
+image: projects/PhDThesis.png
 title: Automated Air Traffic Control<br>for Non-Towered Airports
 venue: Stanford University, 2016
-authors: Z. Mahboubi. Supervised by Prof. Mykel Kochenderfer
+contributors: Supervised by Prof. Mykel Kochenderfer
 description: |
   I modeled the behavior of aircraft in the airport pattern as a hidden Markov Model (HMM) whose parameters are learned from real-world radar observations. Then I determined optimal advisories to reduce the risk of collision by formulating the problem as a partially observable semi-Markov decision process (POSMDP), and solved it using Reinforcement Learning techniques.
   <br><br>

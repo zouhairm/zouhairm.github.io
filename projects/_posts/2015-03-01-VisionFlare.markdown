@@ -1,10 +1,9 @@
 ---
-layout: default
-img: visionFlare.png
-category: projects
+layout: proj
+author: zouhair
+image: projects/visionFlare.png
 title: Above Ground Altitude Estimation for Aircraft During Landing Phase
 venue: Stanford University, 2015
-authors: Z. Mahboubi
 description: |
   I explored the use of an on-board camera to provide altitude estimation
   as a helping tool that could be used for training new pilots.

@@ -6,11 +6,11 @@
         <div class="maxthumb">
             <a href="{{ post.url | absolute_url }}">
                 {% if post.image %}
-
+                {% assign imagePath = site.imageFolder | append: post.image %}
                     {% if site.lazyimages == "enabled" %}
-                        <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">
+                        <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ post.title }}">
                     {% else %}
-                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}"> 
+                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ post.title }}"> 
                     {% endif %}
 
                 {% endif %}
@@ -25,7 +25,12 @@
                 </div>
                 {% endif %}
             </h2>
-            <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
+            {% if post.description %}
+            {% assign excerpt = post.description %}
+            {% else %}
+            {% assign excerpt = post.excerpt %}
+            {% endif %}
+            <h4 class="card-text">{{ excerpt | strip_html | truncatewords:25 }}</h4>
         </div>
         <div class="card-footer bg-white">
             <div class="wrapfooter">

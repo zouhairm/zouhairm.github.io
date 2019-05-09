@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: proj
 author: zouhair
-image: projects/kuka.gif
-category: projects
+image: projects//kuka.gif
 title: Haptic Control of Industrial Robots
 description: |
   I created a remote assembly scenario-concept using 

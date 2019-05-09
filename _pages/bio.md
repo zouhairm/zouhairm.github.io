@@ -2,6 +2,7 @@
 title: Bio & Career Timeline
 permalink: /bio
 layout: default
+skipjumbotron: true
 timeline:
   - date: "2019 - Present"
     title: "Sabbatical"
@@ -11,13 +12,12 @@ timeline:
   - date: "2016 - 2018"
     title: "Kitty Hawk"
     desc: 
-      - "Director of Strategy and Partnerships"
-      - "Head of Product - Technical"
+      - "Head of Product"
     
   - date: "2012 - 2016"
     title: "Stanford University"
     desc: 
-      - "Ph.D. in Aeronautics and Astronautics"
+      - "PhD in Aeronautics & Astronautics"
       - "Thesis: <span class='thigh'>Automated ATC for Non-Towered Airports</span>"
       - "Topics: <span class='thigh'>Markov Process, Machine Learning</span>"
     
@@ -32,8 +32,9 @@ timeline:
       - "Software & Avionics Lead"
     
   - date: "2008 - 2010"
-    title: "Stanford Aero/Astro: Masters of Science"
+    title: "Stanford University"
     desc: 
+      - "MSc in Aeronautics & Astronautics"
       - "Outstanding Student Award"
     
   - date: "2004 - 2008"

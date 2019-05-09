@@ -114,7 +114,8 @@ section.recent-posts {
 
 .maxthumb {
     max-height: 300px;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .listfeaturedtag .card,
@@ -347,7 +348,7 @@ blockquote {
 
 .featured-image {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .share {
@@ -769,9 +770,9 @@ iframe {
         margin-bottom: -50px;
         margin-top: 3rem;
         padding: 0;
-        height: 350px;
+        height: 300px;
         border-radius: 0;
-        background-image: url(../images/jumbotron.jpg);
+        background-image: url(../img/footer.jpg);
         background-size: cover;
     }
 
@@ -789,7 +790,7 @@ iframe {
     margin-top: 3rem;
     padding: 0;
     border-radius: 0;
-    background-image: url(../images/jumbotron.jpg);
+    background-image: url(../img/footer.jpg);
     background-size: cover;
 }
 

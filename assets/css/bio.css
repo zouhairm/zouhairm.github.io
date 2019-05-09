@@ -18,8 +18,8 @@
 #headerblob {
   position: absolute;
   left: 15%;
-  top: 30%;
-  width: 50%;
+  top: 15%;
+  width: 40%;
 }
 #headertext {
   font-size: 26px;
@@ -136,19 +136,21 @@ li {
 #timeline {
   font-size: 20px;
   font-weight: 300;
-  height: 300px;
+  height: 250px;
+  width: 900px;
   overflow-y: auto;
+  margin-left: -17%;
 }
 @media (min-width: 768px) {
   .timelineitem:nth-child(odd) {
     margin-left: 50%;
-    border-left: 5px solid #333;
+    border-left: 5px solid #929292;
     text-align: left;
   }
   .timelineitem:nth-child(even) {
     margin-right: 50%;
     margin-left: 5px;
-    border-right: 5px solid #333;
+    border-right: 5px solid #929292;
     text-align: right;
   }
   .timelineitem {
@@ -167,7 +169,7 @@ li {
 .timelineitem:before {
   width: 11px;
   height: 11px;
-  background: #333;
+  background: #929292;
   content: "";
   display: block;
   position: absolute;
@@ -192,7 +194,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: -5px;
-  color: rgb(132,0,0);
+  color: rgb(236,12,12);
 }
 .ttitle {
   font-size: 20px;

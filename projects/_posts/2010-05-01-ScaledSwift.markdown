@@ -1,10 +1,10 @@
 ---
-layout: default
-img: Swift_XFLR.png
-category: projects
+layout: proj
+author: zouhair
+image: projects/Swift_XFLR.png
 title: Electric Swift UAV
 venue: Stanford & NASA, 2010
-authors: In Collaboration with C. Ippolito
+contributors: In Collaboration with C. Ippolito
 description: |
   The Swift UAV is a foot-launched tailless sailplane that was converted to an electric UAV.
   This project was going to be my original PhD Thesis: building a sub-scale version of the aircraft in order to understand effects of scaling on the aerodynamic performance and dynamic response of sub-scale models.<br>
