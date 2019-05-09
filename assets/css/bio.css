@@ -6,7 +6,7 @@
   margin-bottom: 10px;
 }
 .bg1 {
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../img/intro-bg.jpg');
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../img/jumbotron.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14,9 +14,10 @@
 .bg2 {
   background-color: #299DB6;
 }
+
 #headerblob {
   position: absolute;
-  left: 26%;
+  left: 15%;
   top: 30%;
   width: 50%;
 }
@@ -25,12 +26,15 @@
   font-weight: 400;
   margin-top: 10px;
   margin-left: 37%;
+  width: 100%;
 }
 .imgme {
   border: 3px solid white;
   /* box-shadow: #AAA 0px 0px 4px 0px; */
+  border-radius: 50%;
   float: left;
   height: 200px;
+  vertical-align: middle;
 }
 #htname {
   font-size: 46px;
@@ -132,6 +136,8 @@ li {
 #timeline {
   font-size: 20px;
   font-weight: 300;
+  height: 300px;
+  overflow-y: auto;
 }
 @media (min-width: 768px) {
   .timelineitem:nth-child(odd) {

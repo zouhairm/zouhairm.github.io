@@ -1,6 +1,7 @@
 ---
 layout: default
-img: kuka.gif
+author: zouhair
+image: projects/kuka.gif
 category: projects
 title: Haptic Control of Industrial Robots
 description: |

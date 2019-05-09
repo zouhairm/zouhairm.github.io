@@ -1,39 +1,42 @@
 # Site
 
 
-name: "Zou's Blog"
-title: "Zou's Blog"
-author: Zouhair Mahboubi
+name: "Zouhair M"
+title: "Zouhair M"
 description: Different musings and projects by Zouhair
 
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/img/avatar.png'
+favicon: 'assets/images/favicon.ico'
 # baseurl: /
 # google_analytics: 'UA-46278016-1'
 # disqus: 'demowebsite'
-# mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
 include: ["_pages"]
 permalink: /:title/
 
 # Authors
-author:
-  name: Zouhair M
-  display_name: Zouhair
-  gravatar: 3cada6cba63f6de920dfacde7085675e
-  email: zouhair.mahboubi _at_ gmail
-  web: https://zouhairm.github.io
-  linkedin: https://linkedin.com/in/zouhairm
-  github: https://github.com/zoohair
-  description: "Business and Technical Leader, Ph.D."
-  calendar: ./calendar.html
-  cv: ./ZouhairM_resume.pdf
-  social:
-    - title: linkedin
-      url: https://linkedin.com/in/zouhairm
-    - title: github
-      url: https://github.com/zoohair
-    - title: facebook
-      url: https://facebook.com/zoohair
+authors:
+  zouhair:
+    name: Zouhair Mahboubi
+    display_name: Zouhair
+    gravatar: 3cada6cba63f6de920dfacde7085675e
+    email: zouhair.mahboubi _at_ gmail
+    web: https://zouhairm.github.io
+    linkedin: https://linkedin.com/in/zouhairm
+    github: https://github.com/zoohair
+    description: "Business and Technical Leader, Ph.D."
+    calendar: ./calendar.html
+    social:
+      - title: linkedin
+        url: https://linkedin.com/in/zouhairm
+      - title: file-pdf
+        url: ./ZouhairM_resume.pdf
+      - title: github
+        url: https://github.com/zoohair
+      - title: facebook
+        url: https://facebook.com/zoohair
+      - title: envelope
+        url: mailto:zouhair.mahboubi@gmail
 
 # Plugins
 plugins:
@@ -73,6 +76,7 @@ adsense: "disabled"
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "enabled"
+imageFolder: 'assets/img/'
 
 
 

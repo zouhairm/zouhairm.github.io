@@ -7,6 +7,8 @@ post_class: post-template
 
 <!-- Begin Article
 ================================================== -->
+<!-- Site Title
+================================================== -->
 <div class="container">
     <div class="row">
 
@@ -20,6 +22,11 @@ post_class: post-template
 
         <div class="col-md-9 flex-first flex-md-unordered">
             <div class="mainheading">
+                <!-- Post Title -->
+                <h1 class="posttitle">{{ page.title }}</h1>
+                <p class="lead">
+                    {{ page.description }}
+                </p>
 
                 <!-- Author Box -->
                 {% if page.author %}
@@ -32,14 +39,16 @@ post_class: post-template
                         {% endif %}
                     </div>
                     <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
-                        <span class="author-description">{{ author.description }}</span>
+                        {{ author.display_name }}<br>
+                        {{ page.date| date: "%b %d, %Y" }}
+                        <!-- <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a> -->
+
+                        <!-- <a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a> -->
+
+                        <!-- <span class="author-description">{{ author.description }}</span> -->
                     </div>
                 </div>
                 {% endif %}
-
-                <!-- Post Title -->
-                <h1 class="posttitle">{{ page.title }}</h1>
 
             </div>
 
@@ -51,11 +60,12 @@ post_class: post-template
 
             <!-- Post Featured Image -->
             {% if page.image %}
+            {% assign imagePath = site.imageFolder | append: page.image %}
 
             {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">
+            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
             {% else %}
-            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">
+            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
             {% endif %}
 
             {% endif %}
@@ -142,7 +152,7 @@ post_class: post-template
 
 <!-- Begin Comments
 ================================================== -->
-{% if page.comments != false %}
+{% if page.comments == true %}
     <div class="container">
         <div id="comments" class="row justify-content-center mb-5">
             <div class="col-md-8">

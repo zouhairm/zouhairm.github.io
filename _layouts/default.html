@@ -6,12 +6,13 @@
 
 <link rel="icon" href="{{ site.baseurl }}/assets/img/logo.png">
 
-<title>{{ page.title }} | {{site.name}}</title>
+<title>{{site.name}}</title>
 
 {% seo %}
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+
+
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
@@ -68,8 +69,6 @@ ga('send', 'pageview');
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-
-                
                 <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
                 </li>
 
@@ -82,7 +81,7 @@ ga('send', 'pageview');
                 </li>
 
 
-                {% include search-lunr.html %}
+                <!-- {% include search-lunr.html %} -->
 
             </ul>
 
@@ -98,15 +97,6 @@ ga('send', 'pageview');
 <div class="site-content">
 
 <div class="container">
-
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
-    <p class="lead">
-        {{ site.description }}
-    </p>
-</div>
 
 <!-- Content
 ================================================== -->
