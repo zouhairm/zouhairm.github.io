@@ -17,4 +17,7 @@ links:
     url: https://github.com/zoohair/visionFlare/blob/master/report/report.pdf
   - title: Video Results
     url: https://www.youtube.com/watch?v=QWjFQfFFzrY
+
+
+published: false
 ---

@@ -15,4 +15,6 @@ links:
     url: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20120011965.pdf#page=46
   - title: Scaled Swift Research Proposal
     url: https://github.com/zoohair/SwiftUAV/blob/master/ProjectProposal/SubScaleSwift.pdf
+
+published: false
 ---

@@ -16,4 +16,6 @@ description: |
   As part of a group of Stanford Aero/Astro students, we designed, built, and tested
   small UAVs that we used to set the world altitude record for ’autonomous electrical UAV under 5kg’.
   We launched the UAVs at NASA's Dryden (now Armstrong) flight research center.
+
+published: false
 ---

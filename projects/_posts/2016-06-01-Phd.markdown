@@ -6,9 +6,7 @@ title: Automated Air Traffic Control<br>for Non-Towered Airports
 venue: Stanford University, 2016
 contributors: Supervised by Prof. Mykel Kochenderfer
 description: |
-  I modeled the behavior of aircraft in the airport pattern as a hidden Markov Model (HMM) whose parameters are learned from real-world radar observations. Then I determined optimal advisories to reduce the risk of collision by formulating the problem as a partially observable semi-Markov decision process (POSMDP), and solved it using Reinforcement Learning techniques.
-  <br><br>
-  In order to address the computational complexity of solving the problem, I used different approximation methods including exponential sojourn times, phase-type distributions, online algorithms, and particle filters for belief estimation.
+  Ph.D. thesis: applying Machine Learning tools to air traffic control
 
 links:
   - title: Full Thesis
@@ -22,3 +20,7 @@ links:
   - title: ATM2015
     url: https://pdfs.semanticscholar.org/c5b8/b44e29d57a8552499871806e42fe43b4e63e.pdf
 ---
+
+For my Ph.D. thesis, I modeled the behavior of aircraft in the airport pattern as a hidden Markov Model (HMM) whose parameters are learned from real-world radar observations. Then I determined optimal advisories to reduce the risk of collision by formulating the problem as a partially observable semi-Markov decision process (POSMDP), and solved it using Reinforcement Learning techniques.
+
+In order to address the computational complexity of solving the problem, I used different approximation methods including exponential sojourn times, phase-type distributions, online algorithms, and particle filters for belief estimation.

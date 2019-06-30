@@ -8,7 +8,7 @@ featured: true
 hidden: false
 description: An initial reflection of my time away from work, and why I decided to finally start blogging.
 ---
-As I look back on the last 10 months, it is tempting to romanticize the trip that Olivia and I have embarked on: Sailboats, Manta Rays, Surf Breaks, Horses, and a year-long summer. The reality is that between false starts and extraordinary adventures, unmet expectations and #MemoryMakingMoves, it has been a mixed bag and a rollercoaster of emotions. 
+As I look back on the last 12 months, it is tempting to romanticize the trip that Olivia and I have embarked on: Sailboats, Manta Rays, Surf Breaks, Horses, and a year-long summer. The reality is that between false starts and extraordinary adventures, unmet expectations and #MemoryMakingMoves, it has been a mixed bag and a rollercoaster of emotions. 
 
 But without a doubt, it has changed us. We are no closer to knowing what the right answers are, but we know what questions to ask. It's still as hard to make choices, but we are better at communicating each others' expectations and finding ways to compromise. Our fears and desires are still there, even accentuated in some cases, but we are better at keeping them in check.
 

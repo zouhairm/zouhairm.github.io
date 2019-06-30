@@ -44,7 +44,6 @@ timeline:
 
   
 ---
-
 <link rel="stylesheet" type="text/css" href="assets/css/bio.css">
 
 {% assign author = site.authors["zouhair"] %}

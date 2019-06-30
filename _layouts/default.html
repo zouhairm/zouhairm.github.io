@@ -62,10 +62,10 @@ ga('send', 'pageview');
 
         <!-- Begin Menu -->
 
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
                 {% assign pagelinks = "blog|projects|bio" | split: "|" %}
                 {% for p in pagelinks %}
-                    {% if p == "blog" %}
+                    {% if p == "home" %}
                         {% assign url = "/" %}
                     {% else %}
                         {% assign url = "/" | append: p %}
@@ -175,9 +175,9 @@ ga('send', 'pageview');
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+           <!--  <div class="col-md-6 col-sm-6 text-center text-lg-right">    
                 <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>
