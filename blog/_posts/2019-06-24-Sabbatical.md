@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  End of a Sabbatical
+title:  Reflections on a Sabbatical
 author: zouhair
 tags: [ memorymakingmove ]
 image: blog/sabbatical.jpg
