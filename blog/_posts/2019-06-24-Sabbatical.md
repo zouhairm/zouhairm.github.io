@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Sabbatical
+title:  End of a Sabbatical
 author: zouhair
 tags: [ memorymakingmove ]
 image: blog/sabbatical.jpg
