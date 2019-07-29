@@ -2,6 +2,7 @@
 layout: proj
 author: zouhair
 image: projects/divethedata.jpg
+imageLink: https://www.divethedata.com
 tags: [webdev, datavisualization]
 title: Dive The Data
 venue: Mozambique, 2018

@@ -19,6 +19,11 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
+
+{% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+{% endif %}
+
 </head>
 
 {% if jekyll.environment == 'production' %}

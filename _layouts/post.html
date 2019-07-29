@@ -67,12 +67,21 @@ post_class: post-template
 
             <!-- Post Featured Image -->
             {% if page.image %}
-            {% assign imagePath = site.imageFolder | append: page.image %}
 
-            {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
-            {% else %}
-            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
+            {% if page.imageLink %}
+            <a href="{{ page.imageLink }}" target="_blank">
+            {% endif %}
+
+                {% assign imagePath = site.imageFolder | append: page.image %}
+
+                {% if site.lazyimages == "enabled" %}
+                <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
+                {% else %}
+                <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ imagePath | absolute_url }}{% endif %}" alt="{{ page.title }}">
+                {% endif %}
+
+            {% if page.imageLink %}
+            </a>
             {% endif %}
 
             {% endif %}
@@ -102,17 +111,31 @@ post_class: post-template
             {% endif %}
 
             <!-- Post Date -->
-            <p>
+<!--             <p>
             <small>
                 <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
                 {% if page.last_modified_at %}
                 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
                 {% endif %}
                 </small>
-            </p>
+            </p> -->
 
+            <p></p>
             <!-- Post Categories -->
             <div class="after-post-cats">
+                <small>References & Links</small>
+                <ul class="tags mb-4">
+                    {% for link in page.links %}
+                    <li>
+                        <a class="smoothscroll" target="_blank" href="{{link.url}}">{{ link.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <hr>
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <small>Related Categories & Tags</small>
                 <ul class="tags mb-4">
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
@@ -120,13 +143,7 @@ post_class: post-template
                         <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
                     </li>
                     {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
 
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
                     {% assign sortedTags = page.tags | sort %}
                     {% for tag in sortedTags %}
                     <li>
@@ -135,7 +152,8 @@ post_class: post-template
                     {% endfor %}
                 </ul>
             </div>
-            <!-- End Tags -->
+            <!-- End Categories -->
+
 
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
