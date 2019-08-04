@@ -107,7 +107,7 @@ I chose to center the nodes at the locations were the stories were written, and 
 
 ### Similarity Constellations
 
-<video autoplay="autoplay" loop="loop" width="768" height="512">
+<video autoplay="autoplay" loop="loop" style="width: 50vw">
   <source src="/assets/img/projects/writerblock/cluster4x.mp4" type="video/mp4">
   <img src="/assets/img/projects/writerblock/cluster.png" title="Your browser does not support the <video> tag"></img>
 </video>
