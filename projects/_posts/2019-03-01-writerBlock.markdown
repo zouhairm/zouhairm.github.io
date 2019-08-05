@@ -4,10 +4,10 @@ author: zouhair
 image: projects/writerblock/landing.png
 imageLink: https://zouhairm.github.io/nomadsVue
 tags: [webdev, datavisualization, graphs, machinelearning]
-title: Clustering & Visualizing Travelers' stories with Doc2Vec and WebGL graph renderer
+title: Clustering & Visualizing Travelers' stories with Doc2Vec and WebGL
 venue: Sri Lanka, 2019
 description: |
-  An <a href="https://zouhairm.github.io/nomadsVue" target="_blank">Interactive Data Visualization</a> intended to explore thousands of Travelers' stories. The goal is to make the submissions of aspiring writers fun to discover, and that a wide audience of users finds it interesting; whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists interested in understanding why and how people travel. 
+  This project is an <a href="https://zouhairm.github.io/nomadsVue" target="_blank">Interactive Map Visualization</a> intended to explore thousands of travelers' stories and their connections. Its goal is to make the submissions of aspiring writers fun to discover. It is intended for a wide audience of users; whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists interested in understanding why and how people travel. 
   <br><br>
   In a time where it feels like differences between nations and their people are amplified, I hope this project serves as reminder that many of us are connected through the way we experience our planet and each other.
   <br><br>
@@ -27,7 +27,7 @@ video: true
 # Motivating Story
 
 Although I occasionally find the time to write down musings about life and the universe, they rarely are the kind of stuff that'd captivate your imagination.
-In contrast, my wife Olivia is a talented story teller and writer. One of her goals during our sabbatical was to work on a short story (if you know her, ask her to send you the draft!). Naturally she was the trip's official travel writer and sent out a few diary-emails to friends and family, who without a fail wrote back every time with great praise.
+In contrast, my wife Olivia is a talented story teller and writer. One of her goals during our sabbatical was to work on a short story. Naturally she was the trip's official travel writer and sent out a few diary-emails to friends and family, who without a fail wrote back every time with great praise.
 
 So when I found out that our travel insurance provider (WorldNomads) was sponsoring a travel writing contest, I convinced her to submit an excerpt. At first, I was certain that she'd win; however when we realized that there were over 10,000 submissions, it became obvious that the odds were not favorable.
 
