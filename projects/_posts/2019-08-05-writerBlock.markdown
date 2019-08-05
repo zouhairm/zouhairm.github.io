@@ -104,11 +104,18 @@ I chose to center the nodes at the locations were the stories were written, and 
 
 ### Similarity Constellations
 
-<video playsinline autoplay loop muted style="width: 55vw">
+<video id="cluster4x" playsinline autoplay muted style="width: 55vw">
   <source src="/assets/img/projects/writerblock/cluster4x.mp4" type="video/mp4">
   <img src="/assets/img/projects/writerblock/cluster.png" title="Your browser does not support the <video> tag"></img>
 </video>
-
+<script>
+document.getElementById('cluster4x').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    setTimeout(function(){
+        document.getElementById('cluster4x').play();
+    }, 2000);
+}
+</script>
 
 Aside from a constant layout, VivaGraphJS implements [Force Directed Graph Drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing){:target="&#95;blank"}, a super nifty way to layout graphs. It's basically an N-body simulation where the links between nodes act as springs pulling related nodes together, therefore doubling as a clustering algorithm.
 
