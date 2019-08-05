@@ -7,10 +7,13 @@ tags: [webdev, datavisualization, graphs, machinelearning]
 title: Clustering & Visualizing Travelers' stories with Doc2Vec and WebGL graph renderer
 venue: Sri Lanka, 2019
 description: |
-  An Interactive Data Visualization intended to help explore thousands of Travelers' stories. Hopefully it makes the submissions of these aspiring writers fun to explore, and that a wide audience of users finds it interesting; whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists interested in understanding why and how people travel. In a time where it feels like differences between nations and their people are amplified, I hope this project serves as reminder that so many of us are connected through the way we experience our planet and each other.
+  An <a href="https://zouhairm.github.io/nomadsVue" target="_blank">Interactive Data Visualization</a> intended to explore thousands of Travelers' stories. The goal is to make the submissions of aspiring writers fun to discover, and that a wide audience of users finds it interesting; whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists interested in understanding why and how people travel. 
+  <br><br>
+  In a time where it feels like differences between nations and their people are amplified, I hope this project serves as reminder that many of us are connected through the way we experience our planet and each other.
+  <br><br>
   
 links:
-  - title: Website Link
+  - title: Project Link
     url: https://zouhairm.github.io/nomadsVue
   - title: Nomad Travel Stories
     url: https://www.worldnomads.com/create/scholarships/writing/
@@ -26,7 +29,7 @@ video: true
 Although I occasionally find the time to write down musings about life and the universe, they rarely are the kind of stuff that'd captivate your imagination.
 In contrast, my wife Olivia is a talented story teller and writer. One of her goals during our sabbatical was to work on a short story (if you know her, ask her to send you the draft!). Naturally she was the trip's official travel writer and sent out a few diary-emails to friends and family, who without a fail wrote back every time with great praise.
 
-So when I found out that our travel insurance provider - WorldNomads - was sponsoring a travel writing contest, I convinced her to submit an excerpt. At first, I was certain that she'd win; however when we realized that there were over 10,000 submissions, it became obvious that the odds were not favorable.
+So when I found out that our travel insurance provider (WorldNomads) was sponsoring a travel writing contest, I convinced her to submit an excerpt. At first, I was certain that she'd win; however when we realized that there were over 10,000 submissions, it became obvious that the odds were not favorable.
 
 Sure enough, the results came out, and she wasn't event shortlisted. While disappointing, the whole thing got me thinking about how many other awesome stories must have been shared, and how few of them would be read. I found myself thinking about different questions:
 * How did the judges go through so many stories and rate them?
@@ -37,11 +40,6 @@ Sure enough, the results came out, and she wasn't event shortlisted. While disap
 
 With this in mind, I set out to try to do something interesting with this dataset. I knew that it would be a challenge because aside from that Naive Bayes Spam Filter homework every CS student implements at some point, I don't have any experience with natural language processing (NLP). Still, I figured it would be a good opportunity to learn how machine learning tools can be used with documents. This also coincided with our last week in Sri Lanka - exactly when the prospect to returning to real life started materializing, and I was feeling the urge to do something "fun" before getting back to a full-time job (little did I know it'd end up taking another 2 countries and 4 months before I'd finally start working again)
 
-My goal in writing this post is to share the results with different kind of people. On the one hand, I hope that other data scientists/engineers who might not have had experience with NLP can see that it doesn't take a lot to do interesting things with text. On the other hand, I hope that this attracts a wider audience of readers, whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists/researchers interested in understanding why and how people travel.
-
-In a time where it feels like differences between nations and their people are amplified, this will hopefully serve as reminder that so many of us are connected through the way we experience our planet and each other.
-
-
 ![Typer Writer](/assets/img/projects/writerblock/Banner-typewriter.jpg)
 
 # Exploring Stories
@@ -50,7 +48,8 @@ I did some research on what tools I could use to extract interesting relations b
 
 But before digging into the technical details I think it's worthwhile and fun to talk about how utterly cool the results are (it's great writing on a blog - I wouldn't be able to say this on a peer-reviewed paper!) You can scroll down to [The How](#the-how) section to read about the scraper, the model building/tuning, and the designing/coding of the visualization website.
 
-**Calling in for Galaxy, Galaxy, over** was the title of Olivia's story. It was the radio transmission we'd hear when our friends wanted us to come over for dinner or needed to borrow the spare dhingy motor. The story is set on a sailboat off the coast of Zanzibar - an idyllic archipelago with deserted beaches and welcoming people. The intro went something like this: 
+### Calling in for Galaxy, Galaxy, over
+That was the title of Olivia's story. It was the radio transmission we'd hear when our friends wanted us to come over for dinner or needed to borrow the spare dhingy motor. The story is set on a sailboat off the coast of Zanzibar - an idyllic archipelago with deserted beaches and welcoming people. The intro went something like this: 
 
 > We spent Christmas aboard Galaxy with our makeshift family, a collection of humans as joyfully mismatched as the cutlery we used to dig into our shared meal. A Swiss captain who travels the world before a degenerative eye disease takes it away. A Canadian couple mourning a baby. South African parents who found space for exploration within their empty nest. Molly the hound. And Zouhair and me. I wonder how others would describe us.
 
@@ -78,7 +77,7 @@ Not being an NLP expert, I am not sure if there are similar ways to analyze the 
 
 
 {:refdef: style="text-align: center;"}
-![Clusters](/assets/img/projects/writerblock/cluster_stars.jpg)
+![Clusters](/assets/img/projects/writerblock/galaxy.jpg)
 {: refdef}
 
 ###  Geographical Clusters
@@ -119,7 +118,7 @@ I like to think of it as a collection of constellations, each with a common thre
 Nonetheless, as one explores these constellations, it is interesting how clustered stories will often share similar settings (hiking, ocean, city/urban, airport, train, etc.). That is not surprising as even a rudimentary "bag of words" approach should be able to cluster them together. However, what's ice-cold is when the similarities appear to be driven by the story's structure or sentiment: being lost at the beginning and getting help from a local, trouble with immigration officers that eventually gets resolved, etc. Here are some specific ones I think are worthwhile to highlight.
 
 
-**Overcoming Fears** Whether it's fears of traveling alone, flying, sky-diving, jumping off-boats ... This is one of the biggest constellations, and is self-explanatory. Here is a small sample:
+**Overcoming Fears** Whether it's fears of traveling alone, flying, sky-diving, or jumping off-boats; this is one of the biggest constellations and is self-explanatory. Here is a sample of the stories in the cluster:
 * **Fear is temporary, regret is forever** This story by Sarah Corrigan (USA) about her study abroad in Australia is at the center of one of the biggest clusters. It contains almost all the elements found in the other ones: traveling alone, being held back by fear or social pressures, queasy feelings about/during flights, becoming more adventurous, and jumping! 
 * **Riding Solo** Michael Houston (UK) recounts overcoming his fear of traveling alone to Berlin.
 * **Introducing Kay Cabernet** Kyndra Rothermel (USA) describes how she overcame difficulties of being an expat and eventually became an adrenaline junkie going paragliding and cage diving with sharks.
@@ -137,11 +136,11 @@ Nonetheless, as one explores these constellations, it is interesting how cluster
 * **Russian glasses** Giovanni D'Amico (Italy) struggles with Cyrillic alphabet but fortunately gets help from Masha with buying a train ticket.
 * **The door who gave me a Finish speaker friend** Nicole Da Silva Fleck (Brazil) finds out from the Finnish speaking airline staff that her luggage was lost and gets help from a neighbor who speaks Finnish.
 
-Some other interesting clusters that I found interesting:
+Some other clusters that are worth mentioning:
 
-* Brochures for island beaches: These stories almost read like advertisements describing the scenic beauty of the beaches on iconic islands such as Goa, Boracay, Borneo, Maldives, and Phuket.
-* Travel minutes: stories written in a detailed "hour by hour, day by day" chronological order
-* Jungles and their noises: a tiny cluster of stories about the cacophony one finds in forests and jungles.
+* **Brochures for island beaches** These stories almost read like advertisements describing the scenic beauty of the beaches on iconic islands such as Goa, Boracay, Borneo, Maldives, and Phuket.
+* **Travel minutes** Stories written in a detailed "hour by hour, day by day" chronological order
+* **Jungles and their noises** A tiny cluster of stories about the cacophony one finds in forests and jungles.
 
 
 ### Di-Similarity Nuclei
@@ -153,15 +152,15 @@ Some other interesting clusters that I found interesting:
 
 Clustering by similarity distance is intuitive. However, I had a hypothesis that certain stories might be so different that they ought to appear multiple times as the least similar for multiple other stories. I decided to test this by generating clusters using the same force-directed layout approach, but this time the graph edges connect dissimilar stories. The resulting clusters often have at their center what I like to call Di-Similarity Nuclei, stories that the model repeatedly identifies as least similar. 
 
-**Finding Mongolia's Silent Secret** by Bea Gilbert (UK) showcases how this approach can bubble-up some unique stories. Bea's submission comes up as the least similar to over 20 other submissions, and a quick glance at her introduction paragraph makes it obvious that her writing style (and choice of words) makes hers one of a kind:
+**Finding Mongolia's Silent Secret** by Bea Gilbert (UK) showcases how this approach can bubble-up some unique entries. Bea's submission comes up as the least similar to over 20 other submissions, and a quick glance at her introduction paragraph makes it obvious that her writing style (and choice of words) is one of a kind:
 
 > A breadcrumb trail of skulls studs the forest as we labour North. Each beckons a reliving of the previous evening, where a goat hangs dead in the dark. Pearly skin is tethered taut to the swollen canopy of a ger, scuffed hooves still outstretched, stubbed into the gravel. [...] My journey to this point had been punctuated by clutter, clobber, noise. An airport taxi driver with a wince-inducing cough delivered me into Ulaanbaatar: a grey and car-choked contradiction between Soviet encroachment and a disorganised lunge at modernisation.
 
-Unfortunately, many of the authors' writing style is not of a great quality. The upside is that these stories will often cluster around a story with a significantly different style, therefore highlighting good stories. For example, **Don't Stop** by Rhianna Barbaro (Australia), tells of a gentle hike turned a steep climb written in a pleasant style:
+Unfortunately, there are many stories where the writing style is not of a great quality. The upside is that these stories will often cluster around another with a significantly different and therefore better style. For example, **Don't Stop** by Rhianna Barbaro (Australia), tells of a gentle hike turned a steep climb written in a pleasant style:
 
 > As the old rusted and rattling van swept past fields of thriving green rice paddies and unadulterated countryside, my mind rested on what atrocities this idyllic backdrop could be rehabilitating. As we pulled through a sky-blue gate and onto a dirt road driveway, I didn’t expect to see such vibrant painted wood cabins fashioned like treehouses. This was Sunshine House, an orphanage 90 minutes outside of Phnom Penh, and home to over 50 exploited and abandoned children. It was so far removed from my pre-conceived notions of an orphanage. It was a sanctuary; a refuge.
 
-Contrast her story with these two excerpts for which she comes up as least similar:
+Contrast with these two excerpts for which Rhianna's entry comes up as least similar:
 
 >If we talked about Portugal, you must be remember a famous soccer from Portugal right? Yes, he is Ronaldo. Portugal is identical to Ronaldo, he is a soccer player born over there. If we talk about Portugal, this country is very famous for their soccer histoy. Even in the 2016 Portugal won a Eropa Cup 2016🏆⚽️ and they never stopped being participants in the world cup. Amazing right? But do you know?
 
@@ -172,6 +171,8 @@ Finally, another particularity of these di-similarity clusters is that they occa
 
 
 # The How
+![End Banner](/assets/img/projects/writerblock/wires.jpg)
+
 #### Data Scraping & Model Training
 When I first started working on this project, I figured that I would be doing most of it in python. After all, that's the de-facto scripting language nowadays and the increasing number of ML tools makes it a natural choice. Sure enough, I wrote the webscraper using `BeautifulSoup` which made downloading the stories and storing them with the relevant meta-data straightforward. It actually ended up taking longer to download the stories than to write the script, but that's mostly because Sri Lanka doesn't have the fastest of broadband connections.
 
@@ -189,16 +190,16 @@ One part that took me longer than I expected is to layout the nodes on a map. I 
 #### Web Framework
 The learning curve for VivaGraph was a bit steeper than one would hope for, but that's mainly because I was not familiar with developing in Javascript. Remember, I went from expecting that I'd be mostly coding in python, to suddenly having to understand JS closures, promises, webpack, and npm! And to make matters worse on myself, I was also learning how to use [Vue.js](https://vuejs.org/){:target="&#95;blank"}. Vue made it possible to easily add components to interact with the stories such as the searchbox, the reading pane, and the layout options box. 
 
-Had I sticked with Dash (which uses React.js for its components), it's likely that things would have been a bit easier. The upside is that in the process, I now understand a lot more about Javascript and reactive frameworks.
+Had I stuck with Dash (which uses React.js for its components), it's likely that things would have been a bit easier. The upside is that in the process, I now understand a lot more about Javascript and reactive frameworks.
 
-
-# What's next?
+# What's Next?
+![End Banner](/assets/img/projects/writerblock/lion.jpg)
 
 I am happy with the state of the project so far: it is possible to easily explore stories, find relations between them, and identify interesting ones. However, there are some additional features that I would love to spend some time on, specifically:
 
 * Implement story generation. Perhaps using Bi-directional LSTM as described in this [series of posts](https://medium.com/@david.campion/text-generation-using-bidirectional-lstm-and-doc2vec-models-1-3-8979eb65cb3a){:target="&#95;blank"}. Indeed, it would be interesting to see if a model can generate a story that is most similar or least similar to a submission (or a cluster of them). 
 
-* Illustrating stories: It would be cool to find a way to suggest a "cover picture" for each story. Since the text is too short to be summarized, this approach would serve to provide at a quick glance of the content of a story. Perhaps using an  [Attentional Generative Network](https://github.com/taoxugit/AttnGAN/){:target="&#95;blank"} or 
+* Illustrating stories: It would be cool to find a way to suggest a "cover picture" for each story. Since the text is too short to be summarized, this approach would serve to provide at a quick glance of the content of a story. Perhaps using [Attentional Generative Network](https://github.com/taoxugit/AttnGAN/){:target="&#95;blank"}? 
 
 * Make it possible to directly link to a story or specific layouts. On the same vein, it would be nice to be able to favorite or vote on stories.
 
@@ -207,7 +208,7 @@ I am happy with the state of the project so far: it is possible to easily explor
 * Make all of the stories text searchable. Right now, only metadata is searchable. Making all of the text searchable will likely require a server-side implementation, or moving the stories into a database.
 
 
-I started a new job this week, so we will see how much free time I have to work on any of these improvements. If someone wants to get their hands dirty with it, all of the code can be found on [github](https://github.com/zouhairm/nomadsVue){:target="&#95;blank"}; feel free to fork and submit pull-requests.
+I started a new job this week, so we will see how much free time I have to work on these features. If someone wants to get their hands dirty with it, all of the code is on [github](https://github.com/zouhairm/nomadsVue){:target="&#95;blank"}. Feel free to fork and submit pull-requests.
 
 
 
