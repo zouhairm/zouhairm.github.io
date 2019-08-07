@@ -1,7 +1,7 @@
 ---
 layout: proj
 author: zouhair
-image: projects/writerblock/landing.png
+image: projects/nomadStories/landing.png
 imageLink: https://zouhairm.github.io/nomadsVue
 tags: [webdev, datavisualization, graphs, machinelearning]
 title: Clustering & Visualizing Travelers' stories with Doc2Vec and WebGL
@@ -40,7 +40,7 @@ Sure enough, the results came out, and she wasn't event shortlisted. While disap
 
 With this in mind, I set out to try to do something interesting with this dataset. I knew that it would be a challenge because aside from that Naive Bayes Spam Filter homework every CS student implements at some point, I don't have any experience with natural language processing (NLP). Still, I figured it would be a good opportunity to learn how machine learning tools can be used with documents. This also coincided with our last week in Sri Lanka - exactly when the prospect to returning to real life started materializing, and I was feeling the urge to do something "fun" before getting back to a full-time job (little did I know it'd end up taking another 2 countries and 4 months before I'd finally start working again)
 
-![Typer Writer](/assets/img/projects/writerblock/Banner-typewriter.jpg)
+![Typer Writer](/assets/img/projects/nomadStories/Banner-typewriter.jpg)
 
 # Exploring Stories
 
@@ -77,7 +77,7 @@ Not being an NLP expert, I am not sure if there are similar ways to analyze the 
 
 
 {:refdef: style="text-align: center;"}
-![Clusters](/assets/img/projects/writerblock/galaxy.jpg)
+![Clusters](/assets/img/projects/nomadStories/galaxy.jpg)
 {: refdef}
 
 ###  Geographical Clusters
@@ -88,7 +88,7 @@ I was soon finding myself doing a lot of this story comparison by hand: randomly
 At first I thought that maybe using the computed distances to generate a [Dendrogram](https://en.wikipedia.org/wiki/Dendrogram){:target="&#95;blank"} would expose interesting structures in the stories. However, it turned out that displaying a dendrogram with so many nodes is not very informative nor easy to use. Instead, I decided it'd be easier to start by laying out the stories geographically on a map. 
 
 {:refdef: style="text-align: center;"}
-![Clusters](/assets/img/projects/writerblock/landing.png)
+![Clusters](/assets/img/projects/nomadStories/landing.png)
 {: refdef}
 
 Although the easiest to understand conceptually, it took the longest to get this view working because it was the first. I needed to find the right framework to use. I initially gravitated to using Plotly/Dash given my recent experience with it from the [DivetheData](https://www.divethedata.com){:target="&#95;blank"} project. But after a few false starts, I eventually settled on [VivaGraphJS](https://github.com/anvaka/VivaGraphJS){:target="&#95;blank"} - hailed as the fastest graph visualization framework; and it lived up to its promise!
@@ -105,8 +105,8 @@ I chose to center the nodes at the locations were the stories were written, and 
 ### Similarity Constellations
 
 <video id="cluster4x" playsinline autoplay muted style="width: 55vw">
-  <source src="/assets/img/projects/writerblock/cluster4x.mp4" type="video/mp4">
-  <img src="/assets/img/projects/writerblock/cluster.png" title="Your browser does not support the <video> tag"></img>
+  <source src="/assets/img/projects/nomadStories/cluster4x.mp4" type="video/mp4">
+  <img src="/assets/img/projects/nomadStories/cluster.png" title="Your browser does not support the <video> tag"></img>
 </video>
 <script>
 document.getElementById('cluster4x').addEventListener('ended',myHandler,false);
@@ -153,7 +153,7 @@ Some other clusters that are worth mentioning:
 ### Di-Similarity Nuclei
 
 {:refdef: style="text-align: center;"}
-![Clusters](/assets/img/projects/writerblock/disimilarity.png)
+![Clusters](/assets/img/projects/nomadStories/disimilarity.png)
 {: refdef}
 
 
@@ -178,7 +178,7 @@ Finally, another particularity of these di-similarity clusters is that they occa
 
 
 # The How
-![End Banner](/assets/img/projects/writerblock/wires.jpg)
+![End Banner](/assets/img/projects/nomadStories/wires.jpg)
 
 #### Data Scraping & Model Training
 When I first started working on this project, I figured that I would be doing most of it in python. After all, that's the de-facto scripting language nowadays and the increasing number of ML tools makes it a natural choice. Sure enough, I wrote the webscraper using `BeautifulSoup` which made downloading the stories and storing them with the relevant meta-data straightforward. It actually ended up taking longer to download the stories than to write the script, but that's mostly because Sri Lanka doesn't have the fastest of broadband connections.
@@ -200,7 +200,7 @@ The learning curve for VivaGraph was a bit steeper than one would hope for, but 
 Had I stuck with Dash (which uses React.js for its components), it's likely that things would have been a bit easier. The upside is that in the process, I now understand a lot more about Javascript and reactive frameworks.
 
 # What's Next?
-![End Banner](/assets/img/projects/writerblock/lion.jpg)
+![End Banner](/assets/img/projects/nomadStories/lion.jpg)
 
 I am happy with the state of the project so far: it is possible to easily explore stories, find relations between them, and identify interesting ones. However, there are some additional features that I would love to spend some time on, specifically:
 
