@@ -4,7 +4,7 @@ author: zouhair
 image: projects/nomadStories/landing.png
 imageLink: https://zouhairm.github.io/nomadsVue
 tags: [webdev, datavisualization, graphs, machinelearning]
-title: Clustering & Visualizing Travelers' stories with Doc2Vec and WebGL
+title: Clustering & Visualizing Travelers' Stories with Doc2Vec and WebGL
 venue: Sri Lanka, 2019
 description: |
   This project is an <a href="https://zouhairm.github.io/nomadsVue" target="_blank">Interactive Map Visualization</a> intended to explore thousands of travelers' stories and their connections. Its goal is to make the submissions of aspiring writers fun to discover. It is intended for a wide audience of users; whether it be aspiring travel writers, daydreaming office workers thinking about exploring a new destination, or social scientists interested in understanding why and how people travel. 
@@ -49,7 +49,7 @@ I did some research on what tools I could use to extract interesting relations b
 But before digging into the technical details I think it's worthwhile and fun to talk about how utterly cool the results are (it's great writing on a blog - I wouldn't be able to say this on a peer-reviewed paper!) You can scroll down to [The How](#the-how) section to read about the scraper, the model building/tuning, and the designing/coding of the visualization website.
 
 ### Calling in for Galaxy, Galaxy, over
-That was the title of Olivia's story. It was the radio transmission we'd hear when our friends wanted us to come over for dinner or needed to borrow the spare dhingy motor. The story is set on a sailboat off the coast of Zanzibar - an idyllic archipelago with deserted beaches and welcoming people. The intro went something like this: 
+That was the title of Olivia's story. It was the radio transmission we'd hear when our friends wanted us to come over for dinner or needed to borrow the spare dinghy motor. The story is set on a sailboat off the coast of Zanzibar - an idyllic archipelago with deserted beaches and welcoming people. The intro went something like this: 
 
 > We spent Christmas aboard Galaxy with our makeshift family, a collection of humans as joyfully mismatched as the cutlery we used to dig into our shared meal. A Swiss captain who travels the world before a degenerative eye disease takes it away. A Canadian couple mourning a baby. South African parents who found space for exploration within their empty nest. Molly the hound. And Zouhair and me. I wonder how others would describe us.
 
