@@ -5,44 +5,50 @@ layout: default
 skipjumbotron: true
 timeline:
   - date: "2019 - Present"
+    title: "7 Knots"
+    desc:
+      - "Consultant (modeling, simulation, estimation, control, and optimization)"
+
+  - date: "2018 - 2019"
     title: "Sabbatical"
-    desc: 
+    desc:
       - "Volunteering for Marine Conservation Projects"
-    
+      - "Sailing"
+
   - date: "2016 - 2018"
     title: "Kitty Hawk"
-    desc: 
+    desc:
       - "Head of Product"
-    
+
   - date: "2012 - 2016"
     title: "Stanford University"
-    desc: 
+    desc:
       - "PhD in Aeronautics & Astronautics"
       - "Thesis: <span class='thigh'>Automated ATC for Non-Towered Airports</span>"
       - "Topics: <span class='thigh'>Markov Process, Machine Learning</span>"
-    
+
   - date: "2012 - 2016"
     title: "Zee.Aero"
-    desc: 
+    desc:
       - "Guidance Navigation & Controls Engineer"
-    
+
   - date: "2010 - 2012"
     title: "Zee.Aero"
-    desc: 
+    desc:
       - "Software & Avionics Lead"
-    
+
   - date: "2008 - 2010"
     title: "Stanford University"
-    desc: 
+    desc:
       - "MSc in Aeronautics & Astronautics"
       - "Outstanding Student Award"
-    
+
   - date: "2004 - 2008"
     title: "McGill University: Bachelors of Engineering"
-    desc: 
+    desc:
       - "Mechanical Engineering, Computer Science minor"
 
-  
+
 ---
 <link rel="stylesheet" type="text/css" href="assets/css/bio.css">
 
