@@ -7,7 +7,7 @@ permalink: /calendar.html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
 <script type="text/javascript">
   var timezone = encodeURIComponent(jstz.determine().name());
-  var pref = '<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=em91aGFpci5tYWhib3ViaUBnbWFpbC5jb20&amp;src=em91aGFpckA3a25vdHMuYWk&amp;color=%23D81B60&amp;color=%23D81B60&amp;showDate=1&amp;mode=WEEK&amp;ctz=';
+  var pref = '<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=em91aGFpci5tYWhib3ViaUBnbWFpbC5jb20&amp;src=em91aGFpckA3a25vdHMuYWk&amp;src=em91aGFpci5tYWhib3ViaUBqb2J5YXZpYXRpb24uY29t&amp;color=%23D81B60&amp;color=%23D81B60&amp;color=%23D81B60&amp;showDate=1&amp;mode=WEEK&amp;ctz=';
   var suff = '" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>';
   var iframe_html = pref + timezone + suff;
   document.getElementById('calendar-container').innerHTML = iframe_html;
