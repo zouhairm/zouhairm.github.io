@@ -4,6 +4,11 @@ permalink: /bio
 layout: default
 skipjumbotron: true
 timeline:
+  - date: "2021 - Present"
+    title: "Joby Aviation"
+    desc:
+      - "Product Management Lead, Autonomy"
+
   - date: "2019 - Present"
     title: "7 Knots"
     desc:
